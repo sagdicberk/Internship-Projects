@@ -1,0 +1,31 @@
+<div class="out-box">
+  <app-alertbox [message]="message"/>
+  <div class="header">
+    <h1>Event Tracking</h1>
+    <input type="text" placeholder="Search events" [(ngModel)]="search" (input)="onSearch(search)">
+    <button (click)="onSearchButtonClick()">Search</button>
+    <button (click)="openModal()" class="addEvent">Add Event</button> 
+  </div>
+  <div class="event-container">
+    <div *ngFor="let event of events" class="event-card">
+      <h3>{{ event.name }}</h3>
+      <p>{{ event.location }}</p>
+      <p>{{ formatDate(event.date) }}</p> 
+      <p>Oluşturan: {{ event.author }}</p>
+      <p>Katılım Gösterenler: {{ event.participants.join(', ') }}</p>
+      <button (click)="editEvent(event.id)">Update</button>
+      <button (click)="deleteEvent(event.id)" class="delete">Delete</button>
+      <button (click)="joinEvent(event.id)" class="join">Join</button>
+    </div>
+  </div>
+  <app-event-update-component
+  *ngIf="showUpdateForm"
+  [event]="selectedEvent"
+  (update)="updateEvent($event)"
+  (close)="closeUpdateForm()">
+</app-event-update-component>
+
+  <div *ngIf="showModal" class="modal">
+    <app-event-create-component (eventCreated)="onEventCreated()"></app-event-create-component>
+  </div>
+</div>

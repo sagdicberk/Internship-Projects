@@ -1,0 +1,16 @@
+<div class="modal-content">
+  <span class="close" (click)="closeModal()">×</span>
+  <h2>Create New Event</h2>
+  <form (ngSubmit)="createEvent()">
+    <label for="name">Event Name:</label>
+    <input type="text" id="name" [(ngModel)]="newEvent.name" name="name" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" [(ngModel)]="newEvent.location" name="location" required>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" [(ngModel)]="newEvent.date" name="date" required>
+
+    <button type="submit">Create Event</button>
+  </form>
+</div>
