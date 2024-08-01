@@ -1,0 +1,4 @@
+<div *ngIf="message" [ngClass]="['alert', alertType]" class="message-box">
+  <span>{{ message }}</span>
+  <button class="close" (click)="closeMessageBox()">&times;</button>
+</div>

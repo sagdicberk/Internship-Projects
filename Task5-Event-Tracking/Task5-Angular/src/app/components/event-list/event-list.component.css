@@ -1,0 +1,148 @@
+.out-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .header h1 {
+    margin-bottom: 12px;
+  }
+  
+  .header input {
+    padding: 8px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  .header button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header button:hover {
+    background-color: #0056b3;
+  }
+  
+  .event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .event-card {
+    flex: 1 1 calc(50% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .event-card h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+  
+  .event-card p {
+    margin: 4px 0;
+    color: #666;
+  }
+  
+  .event-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin: 8px 4px 0 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .event-card button.delete {
+    background-color: #dc3545;
+  }
+  
+  .event-card button.delete:hover {
+    background-color: #c82333;
+  }
+  
+  .event-card button.join {
+    background-color: #28a745;
+  }
+  
+  .event-card button.join:hover {
+    background-color: #218838;
+  }
+  
+  .modal {
+    display: block; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal{
+    display: none;
+    position: absolute;
+  }
+
+  .addEvent{
+    margin-left: 600px;
+  }
