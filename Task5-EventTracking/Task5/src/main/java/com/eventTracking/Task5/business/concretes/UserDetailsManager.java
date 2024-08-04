@@ -107,8 +107,8 @@ public class UserDetailsManager implements UserDetailsServiceImp {
 	    User user = userRepository.findById(userId)
 	            .orElseThrow(() -> new UsernameNotFoundException("User not found with ID: " + userId));
 	    
-	    // Assuming roles are stored in a List<String>
-	    String roles = user.getRoles(); // Adjust the method to get roles if needed
+	   
+	    String roles = user.getRoles(); 
 	    if (roles == null) {
 	        return false;
 	    }
