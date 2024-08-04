@@ -42,7 +42,7 @@ public class JwtUtil {
                 .setClaims(claims)
                 .setSubject(email)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) // 10 saat geçerli
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24)) 
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
