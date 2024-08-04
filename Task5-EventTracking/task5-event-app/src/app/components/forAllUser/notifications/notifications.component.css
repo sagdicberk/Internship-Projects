@@ -1,0 +1,65 @@
+/* Bildirim Kapsayıcı Stili */
+.notification-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2d2d2d; /* Koyu gri arka plan */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bildirim Bilgileri Stili */
+.notification-info, .notification-invite {
+  background-color: #333; /* Koyu gri arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Bildirim Bilgileri Başlık Stili */
+.notification-info p, .notification-invite p {
+  margin: 0;
+}
+
+/* Davet Bildirimi Butonları Stili */
+.invite-buttons {
+  margin-top: 10px;
+}
+
+.invite-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff; /* Beyaz metin rengi */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.invite-buttons .accept {
+  background-color: #ffc107; /* Sarı buton arka planı */
+}
+
+.invite-buttons .accept:hover {
+  background-color: #e0a800; /* Buton hover rengi */
+}
+
+.invite-buttons .decline {
+  background-color: #f44336; /* Kırmızı buton arka planı */
+}
+
+.invite-buttons .decline:hover {
+  background-color: #d32f2f; /* Buton hover rengi */
+}
+
+/* Bildirim Yok Stili */
+.no-notifications {
+  text-align: center;
+  color: #e0e0e0; /* Açık gri metin rengi */
+  font-size: 18px;
+  padding: 20px;
+  background-color: #333; /* Koyu gri arka plan */
+  border-radius: 8px;
+}

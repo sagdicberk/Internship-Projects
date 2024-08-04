@@ -1,0 +1,18 @@
+<form (ngSubmit)="onLogin()" class="login-form">
+    <div class="form-group">
+      <label for="username">Email:</label>
+      <input id="username" [(ngModel)]="userDto.email" name="username" type="text" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Şifre:</label>
+      <input id="password" [(ngModel)]="userDto.password" name="password" type="password" required>
+    </div>
+  
+    <button type="submit" class="submit-button">Giriş Yap</button>
+  
+    <div class="register-link">
+      <p>Hesabınız yok mu? <a [routerLink]="['/register']" class="register-link-text">Kayıt olun</a></p>
+    </div>
+  </form>
+  

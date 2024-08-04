@@ -1,0 +1,29 @@
+<nav class="sidebar">
+  <h2>Kategoriler</h2>
+  <ul class="navbar">
+    <li *ngFor="let category of categories" (click)="onCategorySelect(category.id)">
+      {{ category.name }}
+    </li>
+    <li (click)="loadUpcomingEvents()">
+      Aktif Aktiviteler
+    </li>
+    <li (click)="loadEventsInNextWeek()">
+      Bu Haftanın Aktiviteleri
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>Aktiviteler</h1>
+  <ul class="event-list">
+    <li *ngFor="let event of events" class="event-item">
+      <h2>{{ event.header }}</h2>
+      <p><strong>Tarih:</strong> {{ event.date | date:'fullDate' }}</p>
+      <p><strong>Açıklama:</strong> {{ event.description }}</p>
+      <p><strong>Yazar:</strong> {{ event.author }}</p>
+      <p *ngIf="event.completionDate"><strong>Tamamlanma Tarihi:</strong> {{ event.completionDate | date:'fullDate' }}</p>
+      <p><strong>Katılımcılar:</strong> {{ event.participants.join(', ') }}</p>
+      <button (click)="joinEvent(event.id)" class="join-button">Katıl</button>
+    </li>
+  </ul>
+</div>

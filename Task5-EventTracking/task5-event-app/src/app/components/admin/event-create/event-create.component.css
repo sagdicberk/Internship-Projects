@@ -1,0 +1,84 @@
+/* Genel stil */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  margin: 0;
+  padding: 0;
+}
+
+.event-create-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #333; /* Koyu gri arka plan */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık stili */
+.event-create-container h2 {
+  font-size: 24px;
+  color: #ffc107; /* Sarı başlık rengi */
+  margin-bottom: 20px;
+}
+
+/* Form stili */
+.event-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffc107; /* Sarı etiket rengi */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ffc107; /* Sarı kenarlık */
+  border-radius: 4px;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+}
+
+.form-group textarea {
+  resize: vertical; /* Sadece dikey olarak yeniden boyutlandırılabilir */
+  min-height: 100px;
+}
+
+button {
+  background-color: #ffc107; /* Sarı buton arka planı */
+  color: #1c1c1c; /* Siyah buton metni */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #e0a800; /* Disabled buton rengi */
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #e0a800; /* Hover rengi daha koyu sarı */
+  color: #fff;
+}
+
+/* Hata mesajı stili */
+.error-message {
+  color: #dc3545; /* Kırmızı hata mesajı rengi */
+  margin-top: 10px;
+}

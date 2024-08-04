@@ -1,0 +1,101 @@
+/* Genel stil */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  margin: 0;
+  padding: 0;
+}
+
+/* Kategori kapsayıcı stili */
+.category-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #2d2d2d; /* Koyu gri arka plan */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Kategori listesi stili */
+.category-list {
+  margin-bottom: 30px;
+}
+
+.category-list h2 {
+  color: #ffc107; /* Sarı başlık rengi */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffc107; /* Sarı alt çizgi */
+  padding-bottom: 10px;
+}
+
+.category-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-list ul li {
+  background-color: #333; /* Koyu gri arka plan */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  color: #e0e0e0; /* Açık gri metin rengi */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-list ul li strong {
+  color: #ffc107; /* Sarı renk */
+}
+
+/* Kategori ekleme formu stili */
+.category-form {
+  background-color: #333; /* Koyu gri arka plan */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-form h2 {
+  color: #ffc107; /* Sarı başlık rengi */
+  margin-top: 0;
+  border-bottom: 2px solid #ffc107; /* Sarı alt çizgi */
+  padding-bottom: 10px;
+}
+
+.category-form .form-group {
+  margin-bottom: 20px;
+}
+
+.category-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff; /* Beyaz metin rengi */
+}
+
+.category-form input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ffc107; /* Sarı kenarlık */
+  border-radius: 4px;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  box-sizing: border-box;
+}
+
+.category-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffc107; /* Sarı buton arka planı */
+  color: #333; /* Koyu gri metin rengi */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-form button:hover {
+  background-color: #e0a800; /* Buton hover rengi */
+  transform: scale(1.05); /* Buton büyüme efekti */
+}

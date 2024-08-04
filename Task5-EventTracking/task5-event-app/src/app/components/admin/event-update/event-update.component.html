@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()">
+    <label>
+      Başlık:
+      <input type="text" [(ngModel)]="event.header" name="header" required>
+    </label>
+    <label>
+      Açıklama:
+      <textarea [(ngModel)]="event.description" name="description" required></textarea>
+    </label>
+    <label>
+      Tarih:
+      <input type="date" [(ngModel)]="event.date" name="date" required>
+    </label>
+    <label>
+      Tamamlanma Tarihi:
+      <input type="date" [(ngModel)]="event.completionDate" name="completionDate">
+    </label>
+    <label>
+      Kategori:
+      <select [(ngModel)]="event.categoryId" name="categoryId" required>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </label>
+    <button type="submit">Güncelle</button>
+  </form>
+  

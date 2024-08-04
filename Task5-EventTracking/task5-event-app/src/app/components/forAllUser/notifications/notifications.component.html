@@ -1,0 +1,19 @@
+<div class="notification-container">
+  <div *ngIf="notifications && notifications.length > 0">
+    <div *ngFor="let notification of notifications">
+      <div class="notification-info" *ngIf="notification.type === 'info'">
+        <p>{{ notification.message }}</p>
+      </div>
+      <div class="notification-invite" *ngIf="notification.type === 'invite' && !notification.responded">
+        <p>{{ notification.message }}</p>
+        <div class="invite-buttons">
+          <button (click)="respondToInvitation(notification.eventId, true, notification.id)" class="accept">Kabul Et</button>
+          <button (click)="respondToInvitation(notification.eventId, false, notification.id)" class="decline">Reddet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!notifications || notifications.length === 0" class="no-notifications">
+    <p>No notifications available.</p>
+  </div>
+</div>

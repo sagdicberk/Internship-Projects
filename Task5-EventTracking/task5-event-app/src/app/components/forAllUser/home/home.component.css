@@ -1,0 +1,60 @@
+/* Genel stil */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigasyon stili */
+nav {
+  background-color: #333; /* Koyu gri arka plan */
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffc107; /* Sarı renk */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ffc107; /* Sarı arka plan */
+  color: #333; /* Koyu gri metin rengi */
+}
+
+/* İçerik stili */
+.content {
+  padding: 20px;
+  background-color: #2d2d2d; /* Koyu gri arka plan */
+  min-height: 80vh; /* İçeriğin ekranın çoğunu kaplamasını sağlar */
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,65 @@
+/* Genel stil */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Başlık stili */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffc107; /* Sarı başlık rengi */
+  border-bottom: 2px solid #ffc107; /* Sarı alt çizgi */
+  padding-bottom: 10px;
+}
+
+/* Kullanıcı listesi stili */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  background-color: #333; /* Koyu gri arka plan */
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  color: #fff; /* Beyaz metin rengi */
+}
+
+.user-info p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.user-info strong {
+  color: #ffc107; /* Sarı başlık rengi */
+}
+
+/* Responsive yapı */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  li {
+    padding: 10px;
+  }
+}

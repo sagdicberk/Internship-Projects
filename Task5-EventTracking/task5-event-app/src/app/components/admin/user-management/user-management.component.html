@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Kullanıcı Yöneticisi</h1>
+    
+    <!-- List of Users -->
+    <ul>
+      <li *ngFor="let user of users">
+        <div class="user-info">
+          <p><strong>ID:</strong> {{ user.id }}</p>
+          <p><strong>Kullanıcı Adı:</strong> {{ user.username }}</p>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

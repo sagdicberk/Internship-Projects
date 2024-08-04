@@ -1,0 +1,104 @@
+/* Genel stil */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Başlık stili */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffc107; /* Sarı başlık rengi */
+  border-bottom: 2px solid #ffc107; /* Sarı alt çizgi */
+  padding-bottom: 10px;
+}
+
+/* Etkinlikler listesi stili */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  background-color: #333; /* Koyu gri arka plan */
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Etkinlik bilgisi stili */
+.event-info p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.event-info strong {
+  color: #ffc107; /* Sarı başlık rengi */
+}
+
+/* Buton stili */
+button {
+  background-color: #ffc107; /* Sarı buton arka planı */
+  color: #1c1c1c; /* Siyah buton metni */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin:10px 15px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #e0a800; /* Hover rengi daha koyu sarı */
+  color: #fff;
+}
+
+/* Seçim kutusu stili */
+select {
+  background-color: #333; /* Koyu gri arka plan */
+  color: #fff; /* Beyaz metin rengi */
+  border: 1px solid #ffc107; /* Sarı kenarlık */
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+select option {
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+}
+
+/* Responsive yapı */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+
+  select {
+    padding: 4px;
+  }
+}

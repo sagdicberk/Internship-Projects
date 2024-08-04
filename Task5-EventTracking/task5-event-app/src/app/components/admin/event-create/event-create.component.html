@@ -1,0 +1,31 @@
+<div class="event-create-container">
+  <h2>Aktivite Oluştur</h2>
+  <form (ngSubmit)="onSubmit()" class="event-form">
+    <div class="form-group">
+      <label for="header">Başlık:</label>
+      <input id="header" type="text" [(ngModel)]="event.header" name="header" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Açıklama:</label>
+      <textarea id="description" [(ngModel)]="event.description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="date">Tarih:</label>
+      <input id="date" type="date" [(ngModel)]="event.date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="completionDate">Tamamlanma Tarihi:</label>
+      <input id="completionDate" type="date" [(ngModel)]="event.completionDate" name="completionDate">
+    </div>
+    <div class="form-group">
+      <label for="categoryId">Kategori:</label>
+      <select id="categoryId" [(ngModel)]="event.categoryId" name="categoryId" required>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="loading">Aktivite Oluştur</button>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>

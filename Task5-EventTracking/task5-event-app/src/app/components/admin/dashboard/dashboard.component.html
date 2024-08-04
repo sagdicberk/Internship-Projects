@@ -1,0 +1,18 @@
+<div class="admin-dashboard-container">
+  <nav class="admin-dashboard-nav">
+    <h2>Admin Paneli</h2>
+    <ul>
+      <li routerLink="user-management" routerLinkActive="active">Kullanıcı Yöneticisi</li>
+      <li routerLink="event-management" routerLinkActive="active">Aktivite Yöneticisi</li>
+        <ul class="sub-menu">
+          <li routerLink="event-create" routerLinkActive="active">Aktivite Oluştur</li>
+        </ul>
+      <li routerLink="category-management" routerLinkActive="active">Kategori Yöneticisi</li>
+      <li routerLink="statistics-management" routerLinkActive="active">İstatistik</li>
+    </ul>
+  </nav>
+
+  <div class="admin-dashboard-content">
+    <router-outlet></router-outlet> <!-- Dinamik içerik burada yüklenecek -->
+  </div>
+</div>

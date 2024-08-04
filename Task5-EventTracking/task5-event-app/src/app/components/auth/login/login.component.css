@@ -1,0 +1,63 @@
+/* Form Stili */
+.login-form {
+  background-color: #2d2d2d; /* Koyu gri arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+/* Form Grup Stili */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: #fff; /* Beyaz metin rengi */
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ffc107; /* Sarı kenarlık */
+  border-radius: 4px;
+  background-color: #1c1c1c; /* Siyah arka plan */
+  color: #fff; /* Beyaz metin rengi */
+}
+
+/* Gönder Butonu Stili */
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffc107; /* Sarı arka plan */
+  color: #333; /* Koyu gri metin rengi */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e0a800; /* Buton hover rengi */
+}
+
+/* Kayıt Ol Linki Stili */
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link p {
+  color: #fff; /* Beyaz metin rengi */
+}
+
+.register-link-text {
+  color: #ffc107; /* Sarı renk */
+  text-decoration: none;
+}
+
+.register-link-text:hover {
+  text-decoration: underline;
+}

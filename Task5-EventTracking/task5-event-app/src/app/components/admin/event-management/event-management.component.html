@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Aktivite Yöneticisi</h1>
+
+  <!-- List of Events -->
+  <ul>
+    <li *ngFor="let event of events">
+      <div class="event-info">
+        <p><strong>ID:</strong> {{ event.id }}</p>
+        <p><strong>Başlık:</strong> {{ event.header }}</p>
+        <p><strong>Açıklama:</strong> {{ event.description }}</p>
+        <p><strong>Tarih:</strong> {{ event.date | date: 'fullDate' }}</p>
+        <p><strong>Tamamlanma Tarihi:</strong> {{ event.completionDate ? (event.completionDate | date: 'fullDate') : 'N/A'
+          }}</p>
+        <p><strong>Kategori:</strong> {{ event.categoryId }}</p>
+        <p><strong>Katılımcılar:</strong> {{ event.participants.join(', ') }}</p>
+
+        <!-- Buttons -->
+        <button (click)="deleteEvent(event.id)">Sil</button>
+
+        <!-- Güncelleme Butonu -->
+        <button [routerLink]="['/home/admin/event-update', event.id]">Güncelle</button>
+
+
+        <!-- Join Request Section -->
+        <div>
+          <select [(ngModel)]="usernameForJoinRequest">
+            <option *ngFor="let user of users" [value]="user.username">
+              {{ user.username }}
+            </option>
+          </select>
+          <button (click)="sendJoinRequest(event.id)">Giriş İsteği Yolla</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
