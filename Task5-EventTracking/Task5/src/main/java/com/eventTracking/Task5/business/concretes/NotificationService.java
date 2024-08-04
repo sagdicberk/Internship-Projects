@@ -17,7 +17,7 @@ import com.eventTracking.Task5.repository.UserRepository;
 @Service
 public class NotificationService {
     @Autowired
-    private NotificationRepository notificationRepository; // Assuming you have a repository for notifications
+    private NotificationRepository notificationRepository; 
     
     @Autowired
     private UserRepository userRepository;
@@ -32,7 +32,7 @@ public class NotificationService {
         notification.setEventId(eventId);
         notification.setTimestamp(new Date());
         notification.setType(type);
-        notification.setResponded(responded); // Yanıt durumu
+        notification.setResponded(responded); 
 
         notificationRepository.save(notification);
     }
@@ -45,19 +45,18 @@ public class NotificationService {
     }
     
     public void notifyAdmins(Event event) {
-        List<String> adminUsernames = getAdminUsernames(); // Admin kullanıcı adlarını al
+        List<String> adminUsernames = getAdminUsernames(); 
         for (String admin : adminUsernames) {
             sendNotification(
                 admin,
                 "A event '" + event.getHeader() + "' has been changed or created by " + event.getAuthor(),
                 event.getId(),
-                "info", // Bildirim türü (info)
-                false // Yanıt verilmedi (false)
+                "info", 
+                false 
             );
         }
     }
 
-    // Gerçek admin kullanıcı adlarını veritabanından alır
     private List<String> getAdminUsernames() {
         List<User> admins = userRepository.findByRolesContaining("ADMIN");
         return admins.stream()
