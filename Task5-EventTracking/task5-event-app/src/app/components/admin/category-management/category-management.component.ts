@@ -31,8 +31,8 @@ export class CategoryManagementComponent implements OnInit{
       this.adminService.createCategory(this.categoryDto).subscribe(
         response => {
           console.log('Category added successfully', response);
-          this.loadCategories(); // Kategoriyi ekledikten sonra listeyi yeniden yükleyin
-          this.newCategoryName = ''; // Formu temizle
+          this.loadCategories(); 
+          this.newCategoryName = ''; 
         },
         error => console.error('Error adding category', error)
       );
