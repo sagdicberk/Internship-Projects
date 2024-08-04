@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-// Kullanıcı bilgileri için bir arayüz (isteğe bağlı)
 export interface UserDto {
   email:string;
   username: string;
@@ -14,7 +13,7 @@ export interface UserDto {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8080/api/auth'; // Spring Boot API URL'niz
+  private apiUrl = 'http://localhost:8080/api/auth'; 
 
   constructor(private http: HttpClient) { }
 
