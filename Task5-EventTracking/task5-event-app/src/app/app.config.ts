@@ -6,7 +6,7 @@ import { authInterceptorFn } from './services/auth-interceptor.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }), // Zone değişikliklerini yapılandırır
+    provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),// Yönlendirme yapılandırmasını sağlar
     provideHttpClient(withInterceptors([authInterceptorFn]))
     
