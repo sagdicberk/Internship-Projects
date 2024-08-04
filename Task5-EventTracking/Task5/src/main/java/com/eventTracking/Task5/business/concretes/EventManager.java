@@ -95,8 +95,6 @@ public class EventManager implements EventService {
         event.setCompletionDate(eventDto.getCompletionDate());
         
         Category category = categoryRepository.findById(eventDto.getCategoryId()).orElseThrow(() -> new RuntimeException("Category not found"));
-//        Category category = categoryRepository.findById(eventDto.getCategoryId())
-//                .orElseThrow(() -> new RuntimeException("Category not found"));
         event.setCategory(category.getName());
 
         return event;
@@ -128,7 +126,7 @@ public class EventManager implements EventService {
                 "Başarılı bir şekilde aktiviteye katıldınız: " + event.getHeader()+ " Tarihi: " + event.getDate(),
                 eventId,
                 "info",
-                true // Katılım yanıtı verilmiş olarak ayarla
+                true 
             );
         } else {
             throw new RuntimeException("User has already joined the event");
@@ -147,8 +145,8 @@ public class EventManager implements EventService {
             username,
             message,
             eventId,
-            "invite", // Davet türü
-            false // Yanıt verilmedi olarak ayarla
+            "invite", 
+            false 
         );
     }
 
@@ -163,7 +161,7 @@ public class EventManager implements EventService {
         Event event = eventRepository.findById(eventId)
             .orElseThrow(() -> new RuntimeException("Event not found"));
 
-        // Bildirim gönderme işlemi
+        
         if (accept) {
             if (!event.getParticipants().contains(username)) {
                 event.getParticipants().add(username);
@@ -174,7 +172,7 @@ public class EventManager implements EventService {
             notificationService.sendNotification(username, "You have declined the invitation to the event: " + event.getHeader(), eventId, "info", true); // Yanıt verildi olarak ayarla
         }
 
-        // Bildirimi yanıtla
+        
         notificationService.updateNotificationRespondedStatus(notificationId);
     }
 
@@ -188,8 +186,8 @@ public class EventManager implements EventService {
                 participant,
                 "Update on event: " + event.getHeader(),
                 existingEvent.getId(),
-                "info", // Bilgilendirme türü
-                false // Yanıt verilmedi olarak ayarla
+                "info", 
+                false 
             );
         }
     }
