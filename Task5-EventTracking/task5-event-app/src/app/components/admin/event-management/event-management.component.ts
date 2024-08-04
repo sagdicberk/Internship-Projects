@@ -38,7 +38,7 @@ export class EventManagementComponent implements OnInit{
   loadCategories(): void {
     this.allService.getAllCategories().subscribe(
       (categories: Category[]) => {
-        this.categories = categories; // Kategorilerin yüklendiğini doğrulayın
+        this.categories = categories; 
       },
       error => console.error('Error loading categories', error)
     );
@@ -73,7 +73,7 @@ export class EventManagementComponent implements OnInit{
     this.adminService.deleteEvent(id).subscribe(
       response => {
         console.log('Event deleted successfully', response);
-        this.loadEvents(); // Refresh the list after deletion
+        this.loadEvents(); 
       },
       error => console.error('Error deleting event', error)
     );
@@ -84,7 +84,7 @@ export class EventManagementComponent implements OnInit{
       this.adminService.sendJoinRequest(eventId, this.usernameForJoinRequest).subscribe(
         response => {
           console.log('Join request sent successfully', response);
-          this.usernameForJoinRequest = ''; // Clear the input field
+          this.usernameForJoinRequest = ''; 
         },
         error => console.error('Error sending join request', error)
       );
