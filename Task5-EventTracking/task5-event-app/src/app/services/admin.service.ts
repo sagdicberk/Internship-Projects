@@ -9,7 +9,7 @@ import { CategoryDto } from '../model/category.dto';
   providedIn: 'root'
 })
 export class AdminService {
-  private baseUrl = 'http://localhost:8080/api/admin';  // API temel URL'si
+  private baseUrl = 'http://localhost:8080/api/admin'; 
 
   constructor(private http: HttpClient) {}
 
@@ -77,9 +77,9 @@ export class AdminService {
     });
   }
 
-  // Helper method to get authentication headers
+  
   private getAuthHeaders(): HttpHeaders {
-    const token = localStorage.getItem('authToken'); // veya token'ı uygun bir yerden alın
+    const token = localStorage.getItem('authToken'); 
     return new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
