@@ -2,7 +2,7 @@ import { HttpInterceptorFn } from '@angular/common/http';
 
 
 export const authInterceptorFn: HttpInterceptorFn = (req, next) => {
-  const token = localStorage.getItem('authToken'); // Token'ınızı buradan alın
+  const token = localStorage.getItem('authToken'); 
 
   if (token) {
     req = req.clone({
