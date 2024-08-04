@@ -12,12 +12,9 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
 	List<Event> findByCategory(Category category);
 
-	// Tarihi geçmemiş (aktif) etkinlikleri listele
 	List<Event> findByDateAfter(LocalDate currentDate);
 
-	// Tarihi geçmemiş ve belirli bir kategoriye ait etkinlikleri listele
 	List<Event> findByDateAfterAndCategory(LocalDate currentDate, String categoryName);
 
-	// 1 hafta içerisinde gerçekleşecek etkinlikleri listele
 	List<Event> findByDateBetween(LocalDate startDate, LocalDate endDate);
 }
