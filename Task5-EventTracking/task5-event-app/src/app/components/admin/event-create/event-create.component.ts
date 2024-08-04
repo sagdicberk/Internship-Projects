@@ -19,7 +19,7 @@ export class EventCreateComponent implements OnInit {
     description: '',
     date: new Date(),
     completionDate: new Date(),
-    categoryId: 0 // Initialize with a default value
+    categoryId: 0 
   };
   categories: Category[] = [];
   loading: boolean = false;
@@ -45,7 +45,6 @@ export class EventCreateComponent implements OnInit {
         console.log('Event created successfully', response);
         this.resetForm();
         this.loading = false;
-        // Optionally, navigate to another page or display a success message
       },
       error => {
         console.error('Error creating event', error);
