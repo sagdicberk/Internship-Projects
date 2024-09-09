@@ -1,22 +1,17 @@
-Ankaref Internship Projects
+# Ankaref Internship Projects
 
-This repository contains the projects I developed during my mandatory summer internship at Ankaref. Each project was carefully selected to enhance my skills and provide a comprehensive understanding of full-stack development processes.
+This repository showcases the projects I developed during my mandatory summer internship at Ankaref. Each project was selected to enhance my technical skills and provide a well-rounded understanding of full-stack development.
 
-Project Overview
+## Project Overview
 
-Task 1 & Task 2
+### Task 1 & Task 2
+In the first two projects, I focused on core Java, gaining hands-on experience in object-oriented programming (OOP), error handling, and data manipulation.
 
-In these initial projects, I focused solely on Java, gaining practical experience in object-oriented programming, error handling, and data manipulation.
+### Task 3
+I progressed to managing data flows using Java's Stream API, working on more complex operations and expanding my knowledge of functional programming principles.
 
-Task 3
+### Task 4
+This stage involved combining Java with Spring Boot and PostgreSQL to implement CRUD operations. I also introduced JWT-based authentication, marking my entry into secure web development.
 
-I advanced to managing data flows using Java's Stream API, performing more complex operations and deepening my understanding of functional programming.
-
-Task 4
-
-This phase involved using Java alongside Spring Boot and PostgreSQL to implement CRUD operations. Additionally, I implemented authentication mechanisms using JWT tokens, marking my first foray into secure web development.
-
-Task 5
-
-The final project completed my full-stack development journey. I built the backend using Spring Boot and PostgreSQL and developed the frontend with Angular and TypeScript. This project involved creating an event tracking application, connecting backend and frontend components, and performing thorough testing.
-
+### Task 5
+In the final project, I completed my full-stack development experience. I built a backend using Spring Boot and PostgreSQL, and developed a frontend using Angular and TypeScript. The project focused on creating an event tracking application, ensuring seamless integration between the backend and frontend, and conducting extensive testing.
